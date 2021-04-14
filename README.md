@@ -22,8 +22,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/kowackag/Single-price-grid-component.git)
-- Live Site URL: [Add live site URL here](https://kowackag.github.io/Single-price-grid-component/)
+- Solution URL: [https://github.com/kowackag/Single-price-grid-component.git](https://github.com/kowackag/Single-price-grid-component.git)
+- Live Site URL: [https://kowackag.github.io/Single-price-grid-component/](https://kowackag.github.io/Single-price-grid-component/)
 
 ## My process
 
