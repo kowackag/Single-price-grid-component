@@ -9,19 +9,20 @@ body {
     background-color: #E5EFF5;
     font-size: 16px;
     color: hsl(218, 22%, 67%);
+
 }
 
 .wrapper {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
     position: absolute;
     top: 50vh;
     left: 50vw;
     transform: translate(-50%, -50%);
-    width: 45vw;
-    height: 55vh;
+    width: 100%;
+    max-width: 700px;
+    height: 100vh;
+    max-height: 550px;
     background-color: #fff;
     border-radius: 10px;
     overflow: hidden;
@@ -32,7 +33,7 @@ body {
 header {
     display: flex;
     flex-direction: column;
-    padding: 6% 6%;
+    padding: 5% 5%;
     width: 100%;
     height: 45%;
 }
@@ -48,11 +49,19 @@ header h2 {
 }
 
 /******Subscription, Nav******/
+main {
+    display: flex;
+    width: 100%;
+    color: whitesmoke;
+    height: 55%;
+
+}
+
 .subscription,
 nav {
     width: 50%;
     color: whitesmoke;
-    height: 55%;
+    height: 100%;
     padding: 5% 5%;
 }
 
@@ -88,6 +97,7 @@ nav {
 }
 
 /******Navigation******/
+
 nav {
     background-color: #4BD8D5;
 }
@@ -110,85 +120,49 @@ footer {
 
 .attribution {
     font-size: 11px;
-    text-align: center;
 }
 
 .attribution a {
     color: hsl(228, 45%, 44%);
 }
 
-@media (max-width:1340px) and (orientation:landscape) {
+@media (max-width:568px) {
     .wrapper {
-        overflow: scroll;
+        overflow: auto;
     }
 
-    header {
-        height: auto;
+    main {
+        flex-direction: column;
     }
 
-    .subscription,
-    nav {
-        line-height: 1.3;
-    }
-
-    .attribution {
-        display: none;
-    }
-}
-
-@media (max-width:1024px) {
-    .wrapper {
-        overflow: scroll;
-    }
-
-    header {
-        height: auto;
-    }
-
+    header,
     .subscription,
     nav {
         width: 100%;
-        height: auto;
+        height: max-content;
+        line-height: 1.2;
     }
 
     .attribution {
         display: none;
     }
+
 }
 
-@media (max-width:440px) {
-    body {
-        font-size: 14px;
-    }
+@media (max-height:480px) {
 
-    h1 {
-        font-size: 20px;
-    }
-
+    header,
+    nav,
     .subscription {
-        line-height: 1.5;
+        height: max-content;
     }
 
-    .subscription button {
-        height: 20%;
-    }
-}
-
-@media (max-height:780px) {
     .wrapper {
-        overflow: scroll;
-    }
-
-    header {
-        height: auto;
-    }
-
-    .subscription,
-    nav {
-        height: 100%;
+        overflow: auto;
     }
 
     .attribution {
         display: none;
     }
+
 }
