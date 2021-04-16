@@ -4,28 +4,30 @@
     box-sizing: border-box;
 }
 
-body {
+html {
+    height: 100%;
     font-family: "Karla", sans-serif;
     background-color: #E5EFF5;
     font-size: 16px;
     color: hsl(218, 22%, 67%);
+}
 
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100%;
 }
 
 .wrapper {
     display: flex;
-    flex-wrap: wrap;
-    position: absolute;
-    top: 50vh;
-    left: 50vw;
-    transform: translate(-50%, -50%);
+    flex-direction: column;
     width: 100%;
     max-width: 700px;
     height: 100vh;
     max-height: 550px;
     background-color: #fff;
     border-radius: 10px;
-    overflow: hidden;
 }
 
 /******Header*******/
@@ -34,13 +36,12 @@ header {
     display: flex;
     flex-direction: column;
     padding: 5% 5%;
-    width: 100%;
-    height: 45%;
 }
 
 header h1 {
     color: #2AB2AF;
     margin-bottom: 20px;
+
 }
 
 header h2 {
@@ -51,18 +52,15 @@ header h2 {
 /******Subscription, Nav******/
 main {
     display: flex;
-    width: 100%;
     color: whitesmoke;
-    height: 55%;
-
+    flex-grow: 1;
 }
 
 .subscription,
 nav {
     width: 50%;
-    color: whitesmoke;
-    height: 100%;
-    padding: 5% 5%;
+    /* flex-grow: 1; */
+    padding: 8% 5%;
 }
 
 /******Subscription******/
@@ -70,6 +68,7 @@ nav {
 .subscription {
     background-color: #2AB2AF;
     line-height: 1.9;
+    border-radius: 0 0 0 10px;
 }
 
 .subscription .price {
@@ -84,14 +83,14 @@ nav {
 
 .subscription button {
     display: block;
-    margin-top: 20px;
+    margin-top: 25px;
     width: 100%;
-    height: 22%;
+    height: 50px;
     min-height: 25px;
     border: none;
     background-color: hsl(71, 73%, 54%);
     border-radius: 8px;
-    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
     color: white;
     font-weight: 700;
 }
@@ -100,19 +99,20 @@ nav {
 
 nav {
     background-color: #4BD8D5;
+    border-radius: 0 0 10px 0;
 }
 
 nav ul {
-    margin-top: 20px;
+    margin-top: 3vh;
     font-size: 14px;
 }
 
 nav ul li {
     list-style: none;
-    line-height: 1.4;
 }
 
 /******Footer*******/
+
 footer {
     position: fixed;
     bottom: 10px;
@@ -126,43 +126,29 @@ footer {
     color: hsl(228, 45%, 44%);
 }
 
-@media (max-width:568px) {
+@media (max-width:533px) {
     .wrapper {
-        overflow: auto;
+        max-height: max-content;
     }
 
     main {
         flex-direction: column;
     }
-
-    header,
+    
     .subscription,
     nav {
-        width: 100%;
-        height: max-content;
-        line-height: 1.2;
+       width: 100%;
+       border-radius:0;
     }
 
     .attribution {
         display: none;
     }
-
 }
 
 @media (max-height:480px) {
 
-    header,
-    nav,
-    .subscription {
-        height: max-content;
-    }
-
-    .wrapper {
-        overflow: auto;
-    }
-
     .attribution {
         display: none;
     }
-
 }
